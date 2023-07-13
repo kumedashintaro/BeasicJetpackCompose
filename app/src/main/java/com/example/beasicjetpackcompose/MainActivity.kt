@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 private fun MyApp(
     modifier: Modifier = Modifier,
     names: List<String> = listOf("World", "Compose")
-    ) {
+) {
     Column(modifier = modifier.padding(vertical = 4.dp)) {
         for (name in names) {
             Greeting(name = name)
@@ -45,7 +45,9 @@ private fun Greeting(name: String) {
         color = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(24.dp)) {
+        Column(modifier = Modifier
+            .fillMaxWidth()
+            .padding(24.dp)) {
             Text(text = "Hello,")
             Text(text = name)
         }
